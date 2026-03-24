@@ -7,14 +7,26 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "engines": { "node": ">=18.0.0" },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noxymon/excel-cli.git"
+  },
+  "homepage": "https://github.com/noxymon/excel-cli#readme",
+  "bugs": {
+    "url": "https://github.com/noxymon/excel-cli/issues"
+  },
+  "author": "noxymon",
   "keywords": ["excel", "xlsx", "xls", "ods", "cli", "csv", "spreadsheet"],
+  "files": ["bin", "dist", "package.json", "README.md", "LICENSE"],
   "scripts": {
     "build": "tsup",
     "dev": "tsx src/index.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "eslint src/ test/"
+    "lint": "eslint src/ test/",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "xlsx": "^0.18.5",
